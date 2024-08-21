@@ -1,0 +1,46 @@
+.header2 {
+  transform: translateY(-13px);
+  background: #2870aa;
+}
+.header2 nav a {
+  font-size: 13px;
+  color: #fff;
+}
+.header2 .navL a {
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+.header2 .navL a:hover {
+  color: #dddddd;
+}
+.header2 .navR .linked {
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-weight: 600;
+}
+.header2 .navR .linked:nth-child(1) {
+  background: #0288d1;
+  transition: all 0.2s ease;
+}
+.header2 .navR .linked:nth-child(1):hover {
+  background: #0e2d80;
+}
+.header2 .navR .linked:nth-child(2) {
+  background: #0e2d80;
+}
+
+marquee {
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #0288d1;
+  color: #fff;
+  padding: 2px 0;
+  margin: 0 15px;
+}
+marquee a {
+  color: #dddddd;
+  text-transform: lowercase;
+}
+
+/*# sourceMappingURL=enrollment.css.map */

@@ -13,6 +13,9 @@
 	user-select: none;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
 .spaceTop {
 	padding-top: 60px;
 }

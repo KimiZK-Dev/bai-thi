@@ -1,13 +1,13 @@
 class authController {
 	login(req, res, next) {
 		res.render("auth/login", {
-			title: "Trang Đăng Nhập",
+			title: "Đăng Nhập",
 			css: "/css/auth/login.css",
 		});
 	}
 	register(req, res, next) {
 		res.render("auth/register", {
-			title: "Trang Đăng Kí",
+			title: "Đăng Ký",
 			css: "/css/auth/register.css",
 		});
 	}

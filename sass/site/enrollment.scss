@@ -1,0 +1,51 @@
+@import "../colors";
+
+.header2 {
+	transform: translateY(-13px);
+	background: $color7;
+	nav a {
+		font-size: 13px;
+		color: $color1;
+	}
+
+	.navL {
+		a {
+			text-transform: uppercase;
+			transition: all 0.2s ease;
+		}
+		a:hover {
+			color: $color5;
+		}
+	}
+	.navR {
+		.linked {
+			padding: 5px 10px;
+			border-radius: 5px;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			font-weight: 600;
+		}
+		.linked:nth-child(1) {
+			background: $color8;
+			transition: all 0.2s ease;
+		}
+		.linked:nth-child(1):hover {
+			background: $color2;
+		}
+		.linked:nth-child(2) {
+			background: $color2;
+		}
+	}
+}
+
+marquee {
+	text-transform: uppercase;
+	font-weight: 700;
+	background: $color8;
+	color: $color1;
+	padding: 2px 0;
+	margin: 0 15px;
+	a {
+		color: $color5;
+		text-transform: lowercase;
+	}
+}
