@@ -1,0 +1,102 @@
+@charset "UTF-8";
+section {
+  background: #dddddd;
+  height: 100vh;
+  margin-bottom: 15px;
+}
+
+.bannerLogin {
+  width: 65%;
+  height: 100vh;
+}
+.bannerLogin img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.formAuth {
+  width: 35%;
+}
+.formAuth h4,
+.formAuth h5,
+.formAuth h6 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.formAuth .logo {
+  width: 100px;
+  height: 100px;
+}
+.formAuth .logo img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.formAuth form {
+  background: #fff;
+}
+.formAuth form .headForm {
+  margin-bottom: 35px;
+}
+.formAuth form .headForm h4 {
+  font-size: 30px;
+  color: #005a9c;
+}
+.formAuth form .headForm p {
+  font-size: small;
+  opacity: 0.7;
+}
+.formAuth form .formInput {
+  position: relative;
+}
+.formAuth form .formInput input[type=number]::-webkit-outer-spin-button,
+.formAuth form .formInput input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none; /* Thuộc tính tiêu chuẩn cho khả năng tương thích */
+  margin: 0;
+}
+.formAuth form .formInput input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield; /* Thuộc tính tiêu chuẩn cho khả năng tương thích */
+}
+.formAuth form .formInput label {
+  transition: all 0.25s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #a5a5a5;
+  pointer-events: none;
+}
+.formAuth form .formInput input:not(:placeholder-shown) + label,
+.formAuth form .formInput input:focus + label {
+  top: 0;
+  left: 12px;
+  font-size: small;
+  background: #fff;
+  color: #0e2d80;
+  padding: 0 7px;
+}
+.formAuth form .formInput input:focus {
+  border: 1px solid #0e2d80 !important;
+}
+.formAuth form button {
+  background: #005a9c !important;
+  color: #fff !important;
+}
+.formAuth form button:hover {
+  background: #00375f !important;
+}
+.formAuth span {
+  font-size: small;
+}
+
+.formInput input {
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+}
+
+/*# sourceMappingURL=login.css.map */

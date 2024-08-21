@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+@keyframes botBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  user-select: none;
+}
+
+.spaceTop {
+  padding-top: 60px;
+}
+
+#HEADER {
+  background: #0e2d80;
+}
+#HEADER .item a {
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+#HEADER .line {
+  width: 1px;
+  height: 80%;
+  background: #fff;
+  opacity: 0.5;
+  margin: 0 10px;
+}
+#HEADER .item a:hover {
+  color: #dfff00;
+}
+
+#FOOTER {
+  background: #0e2d80;
+}
+#FOOTER .footer-links-title {
+  margin-bottom: 25px;
+  opacity: 0.5;
+}
+#FOOTER a {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.header {
+  background: url("https://hnue.edu.vn/Portals/_default/skins/hnue_skin/img/menu_bg.png") no-repeat center center;
+  background-size: 100% auto;
+}
+.header .logo {
+  width: 100px;
+  height: 100px;
+}
+.header .logo img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.header h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.banner {
+  width: 100%;
+}
+.banner img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.linked h3 {
+  background: #0e2d80;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-transform: uppercase;
+}
+.linked a {
+  color: #fff;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  padding: 10px 22px;
+  background-color: #0e2d80;
+  transition: all 0.2s ease;
+}
+.linked a:hover {
+  background-color: #0044ff;
+  border-radius: 15px;
+}
+.linked a:active {
+  transform: scale(0.96);
+}
+.linked a:before,
+.linked a:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  z-index: -1000;
+}
+.linked a:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: topBubbles 0.6s ease;
+}
+.linked a:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%), radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: botBubbles 0.6s ease;
+}
+.linked .enterReg {
+  background: url("https://animatedimages.org/data/media/562/animated-line-image-0379.gif") no-repeat center center;
+  background-size: 100% auto;
+}
+
+/*# sourceMappingURL=app.css.map */
