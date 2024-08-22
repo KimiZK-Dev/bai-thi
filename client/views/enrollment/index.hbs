@@ -23,10 +23,260 @@
 <marquee
 	onmouseover="this.stop();"
 	onmouseout="this.start();"
-	scrollamount="15"
+	scrollamount="10"
 >✨từ 18/7 đến 17h00 ngày 30/7/2024, thí sinh đăng ký nguyện vọng xét tuyển trên
 	hệ thống hỗ trợ tuyển sinh của bộ gdđt tại địa chỉ:
 	<a
+		target="_blank"
 		href="https://thisinh.thitotnghiepthpt.edu.vn"
 	>https://thisinh.thitotnghiepthpt.edu.vn</a>✨
 </marquee>
+
+<form action="" method="POST">
+	<div class="title w-100 d-flex justify-content-center pt-3 mt-3">
+		<div class="w-75">
+			<h3>đăng ký thông tin thí sinh</h3>
+			<hr />
+		</div>
+	</div>
+	<div class="formReg">
+		<div class="partOne">
+			<h5>1. Thông tin cá nhân</h5>
+			<div class="splitPart">
+				<div class="formInput">
+					<input
+						type="text"
+						id="fullName"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="fullName">Tên đầy đủ*</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="date"
+						id="birthDay"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="birthDay">Ngày sinh</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="number"
+						id="passPort"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="passPort">Số CMND/CCCD*</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="date"
+						id="dateRegPassPort"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="dateRegPassPort">Ngày cấp</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="text"
+						id="wherePassPort"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="wherePassPort">Nơi cấp</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="text"
+						id="sex"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="sex">Giới tính</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="text"
+						id="placeOfBirth"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="placeOfBirth">Nơi sinh</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="text"
+						id="nation"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="nation">Dân tộc</label>
+				</div>
+			</div>
+		</div>
+		<div class="part partTwo">
+			<h5>2. Thông tin liên hệ</h5>
+			<div class="splitPart">
+				<div class="formInput">
+					<input
+						type="number"
+						id="phone"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="phone">Số điện thoại*</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="number"
+						id="relativePhone"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="relativePhone">SĐT người thân*</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="email"
+						id="email"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="email">Email*</label>
+				</div>
+			</div>
+		</div>
+		<div class="part partThree">
+			<h5>3. Địa chỉ liên lạc tạm trú</h5>
+			<div class="splitPart">
+				<div class="formInput">
+					<input
+						type="text"
+						id="Province_permanentResidence"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="Province_permanentResidence">Tỉnh/thành thường
+						trú</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="text"
+						id="District_permanentResidence"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="District_permanentResidence">Quận/huyện thường
+						trú</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="text"
+						id="Commune_permanentResidence"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="Commune_permanentResidence">Phường/xã thường trú</label>
+				</div>
+				<div class="formInput fw">
+					<input
+						type="text"
+						id="detailedAddress"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="detailedAddress">Địa chỉ chi tiết: Số nhà, tên
+						đường, tổ/xóm, khu phố/thôn*</label>
+				</div>
+			</div>
+		</div>
+		<div class="part partFour">
+			<h5>4. Địa chỉ hộ khẩu thường trú</h5>
+			<div class="splitPart">
+				<div class="formInput">
+					<input
+						type="text"
+						id="ProvinceTemporary_CA"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="ProvinceTemporary_CA">Tỉnh/thành đ/c liên lạc</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="text"
+						id="DistrictTemporary_CA"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="DistrictTemporary_CA">Quận/huyện đ/c liên lạc
+					</label>
+				</div>
+				<div class="formInput">
+					<input
+						type="text"
+						id="CommuneTemporary_CA"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="CommuneTemporary_CA">Phường/xã thường trú</label>
+				</div>
+				<div class="formInput fw">
+					<input
+						type="text"
+						id="detailedAddress_2"
+						class="border border-dark-subtle"
+						placeholder=" "
+						autocomplete="off"
+						required
+					/>
+					<label for="detailedAddress_2">Địa chỉ chi tiết: Số nhà, tên
+						đường, tổ/xóm, khu phố/thôn*</label>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-warning mt-4 text-white">
+			<i class="fa-solid fa-floppy-disk"></i>
+			Hoàn tất
+		</button>
+	</div>
+</form>

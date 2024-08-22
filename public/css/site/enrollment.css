@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header2 {
   transform: translateY(-13px);
   background: #2870aa;
@@ -16,7 +17,7 @@
 .header2 .navR .linked {
   padding: 5px 10px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   font-weight: 600;
 }
 .header2 .navR .linked:nth-child(1) {
@@ -41,6 +42,92 @@ marquee {
 marquee a {
   color: #dddddd;
   text-transform: lowercase;
+}
+
+.title {
+  background: rgba(221, 221, 221, 0.5254901961);
+}
+.title h3 {
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #0288d1;
+  text-transform: uppercase;
+  text-align: center;
+}
+.title hr {
+  margin-top: 0;
+  border-radius: 5px;
+  border: 1px solid #0e2d80;
+}
+
+.formReg {
+  margin: 50px 10px 70px 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0 0 5px;
+}
+.formReg h5 {
+  color: #fff;
+  width: fit-content;
+  background: #0288d1;
+  font-weight: 600;
+  padding: 5px 20px;
+  margin: 0;
+  margin-bottom: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+.formReg .part {
+  margin-top: 50px;
+}
+.formReg .splitPart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.formReg .splitPart .fw {
+  grid-column: span 3;
+}
+.formReg .formInput {
+  position: relative;
+  grid-column: span 1;
+}
+.formReg .formInput input[type=number]::-webkit-outer-spin-button,
+.formReg .formInput input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none; /* Thuộc tính tiêu chuẩn cho khả năng tương thích */
+  margin: 0;
+}
+.formReg .formInput input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield; /* Thuộc tính tiêu chuẩn cho khả năng tương thích */
+}
+.formReg .formInput input {
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 8px 15px;
+}
+.formReg .formInput label {
+  transition: all 0.25s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #a5a5a5;
+  pointer-events: none;
+}
+.formReg .formInput input:not(:placeholder-shown) + label,
+.formReg .formInput input:focus + label {
+  top: 0;
+  left: 12px;
+  font-size: small;
+  background: #fff;
+  color: #0e2d80;
+  padding: 0 7px;
+}
+.formReg .formInput input:focus {
+  border: 1px solid #0e2d80 !important;
 }
 
 /*# sourceMappingURL=enrollment.css.map */

@@ -1,33 +1,5 @@
-#HEADER {
-	background: $color2;
-	.item a {
-		font-size: 15px;
-		color: $color1;
-		transition: all 0.3s ease;
-	}
-	.line {
-		width: 1px;
-		height: 80%;
-		background: $color1;
-		opacity: 0.5;
-		margin: 0 10px;
-	}
-	.item a:hover {
-		color: $color4;
-	}
-}
-
-#FOOTER {
-	background: $color2;
-	.footer-links-title {
-		margin-bottom: 25px;
-		opacity: 0.5;
-	}
-	a {
-		color: $color1;
-		margin-bottom: 5px;
-	}
-}
+@import "../animations";
+@import "../colors";
 
 .header {
 	background: url("https://hnue.edu.vn/Portals/_default/skins/hnue_skin/img/menu_bg.png")
@@ -75,7 +47,7 @@
 		transition: all 0.2s ease;
 	}
 	a:hover {
-		background-color: $color3;
+		background-color: $color6-h;
 		border-radius: 15px;
 	}
 	a:active {
@@ -96,25 +68,25 @@
 
 	a:hover:before {
 		top: -70%;
-		background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+		background-image: radial-gradient(circle, $color9 20%, transparent 20%),
 			radial-gradient(
 				circle,
 				transparent 20%,
-				#7d2ae8 20%,
+				$color9 20%,
 				transparent 30%
 			),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%),
 			radial-gradient(
 				circle,
 				transparent 10%,
-				#7d2ae8 15%,
+				$color9 15%,
 				transparent 20%
 			),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+			radial-gradient(circle, $color9 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%);
 		background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
 			15% 15%, 10% 10%, 18% 18%;
 		background-position: 50% 120%;
@@ -123,18 +95,18 @@
 
 	a:hover::after {
 		bottom: -70%;
-		background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+		background-image: radial-gradient(circle, $color9 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%),
 			radial-gradient(
 				circle,
 				transparent 10%,
-				#7d2ae8 15%,
+				$color9 15%,
 				transparent 20%
 			),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%),
-			radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+			radial-gradient(circle, $color9 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%),
+			radial-gradient(circle, $color9 20%, transparent 20%);
 		background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%,
 			18% 18%;
 		background-position: 50% 0%;

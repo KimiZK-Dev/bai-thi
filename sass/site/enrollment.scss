@@ -21,7 +21,8 @@
 		.linked {
 			padding: 5px 10px;
 			border-radius: 5px;
-			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+				rgba(0, 0, 0, 0.23) 0px 3px 6px;
 			font-weight: 600;
 		}
 		.linked:nth-child(1) {
@@ -47,5 +48,100 @@ marquee {
 	a {
 		color: $color5;
 		text-transform: lowercase;
+	}
+}
+
+.title {
+	background: $color5-o;
+	h3 {
+		font-weight: 700;
+		letter-spacing: 6px;
+		color: $color8;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	hr {
+		margin-top: 0;
+		border-radius: 5px;
+		border: 1px solid $color2;
+	}
+}
+
+.formReg {
+	margin: 50px 10px 70px 10px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0 0 5px;
+	h5 {
+		color: $color1;
+		width: fit-content;
+		background: $color8;
+		font-weight: 600;
+		padding: 5px 20px;
+		margin: 0;
+		margin-bottom: 15px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+	}
+
+	.part {
+		margin-top: 50px;
+	}
+
+	.splitPart {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		width: 100%;
+		.fw {
+			grid-column: span 3;
+		}
+	}
+
+	.formInput {
+		position: relative;
+		grid-column: span 1;
+		input[type="number"]::-webkit-outer-spin-button,
+		input[type="number"]::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			appearance: none; /* Thuộc tính tiêu chuẩn cho khả năng tương thích */
+			margin: 0;
+		}
+
+		input[type="number"] {
+			-moz-appearance: textfield;
+			appearance: textfield; /* Thuộc tính tiêu chuẩn cho khả năng tương thích */
+		}
+
+		input {
+			outline: none;
+			border-radius: 5px;
+			width: 100%;
+			padding: 8px 15px;
+		}
+
+		label {
+			transition: all 0.25s ease;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 15px;
+			color: $color1-o;
+			pointer-events: none;
+		}
+
+		input:not(:placeholder-shown) + label,
+		input:focus + label {
+			top: 0;
+			left: 12px;
+			font-size: small;
+			background: $color1;
+			color: $color2;
+			padding: 0 7px;
+		}
+
+		input:focus {
+			border: 1px solid $color2 !important;
+		}
 	}
 }

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import "animations";
 @import "colors";
 
 * {
@@ -12,12 +11,45 @@
 	text-decoration: none !important;
 	user-select: none;
 }
-
 ::-webkit-scrollbar {
 	display: none;
 }
+body {
+	overflow-x: hidden;
+}
+
 .spaceTop {
 	padding-top: 60px;
 }
 
-@import "home";
+#HEADER {
+	z-index: 99999;
+	background: $color2;
+	.item a {
+		font-size: 15px;
+		color: $color1;
+		transition: all 0.3s ease;
+	}
+	.line {
+		width: 1px;
+		height: 80%;
+		background: $color1;
+		opacity: 0.5;
+		margin: 0 10px;
+	}
+	.item a:hover {
+		color: $color4;
+	}
+}
+
+#FOOTER {
+	background: $color2;
+	.footer-links-title {
+		margin-bottom: 25px;
+		opacity: 0.5;
+	}
+	a {
+		color: $color1;
+		margin-bottom: 5px;
+	}
+}
