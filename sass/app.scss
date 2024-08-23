@@ -21,8 +21,11 @@ body {
 .spaceTop {
 	padding-top: 60px;
 }
+.spaceTopAD {
+	padding-top: 120px;
+}
 
-#HEADER {
+#HEADER-CL {
 	z-index: 99999;
 	background: $color2;
 	.item a {
@@ -41,8 +44,15 @@ body {
 		color: $color4;
 	}
 }
+#HEADER-AD {
+	z-index: 99999;
+	background: $color10;
+}
 
-#FOOTER {
+#FOOTER-AD {
+	background: $color10;
+}
+#FOOTER-CL {
 	background: $color2;
 	.footer-links-title {
 		margin-bottom: 25px;
