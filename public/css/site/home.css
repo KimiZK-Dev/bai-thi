@@ -43,6 +43,26 @@
     margin-top: 10px;
   }
 }
+@media (max-width: 760px) {
+  .splitPart {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+    width: 100%;
+  }
+  .splitPart .fw {
+    grid-column: span 2 !important;
+  }
+}
+@media (max-width: 635px) {
+  .header2 .navL,
+  .header2 .navR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+  }
+}
 .header {
   background: url("https://hnue.edu.vn/Portals/_default/skins/hnue_skin/img/menu_bg.png") no-repeat center center;
   background-size: 100% auto;
