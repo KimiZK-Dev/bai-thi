@@ -1,4 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@media (max-width: 1025px) {
+  .contentNav {
+    display: flex !important;
+    flex-direction: column;
+    position: relative;
+  }
+  .contentNav .navResponsive {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  .contentNav .navResponsive .loginBtn {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 30px;
+  }
+  .contentNav .navResponsive .loginBtn i {
+    color: #fff;
+  }
+  .contentNav .navL,
+  .contentNav .navR {
+    display: none !important;
+    background: #005496;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px !important;
+  }
+  .contentNav .navL .item,
+  .contentNav .navR .item {
+    padding: 10px 0;
+  }
+  .contentNav .navL .item a,
+  .contentNav .navR .item a {
+    font-size: 17px !important;
+  }
+  .contentNav .navL .item .loginBtn,
+  .contentNav .navR .item .loginBtn {
+    display: none !important;
+  }
+  .contentNav .navL .item .log-reg,
+  .contentNav .navR .item .log-reg {
+    display: block !important;
+  }
+  .contentNav .navL .item .log-reg a:nth-child(1),
+  .contentNav .navR .item .log-reg a:nth-child(1) {
+    margin-right: 30px;
+  }
+  .contentNav .navL .item:hover,
+  .contentNav .navR .item:hover {
+    background: #2870aa;
+  }
+  .contentNav .navL.active,
+  .contentNav .navR.active {
+    display: block !important;
+  }
+  .menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+    padding: 12px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .menu span {
+    width: 32px;
+    height: 4px;
+    background: #fff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  .menu span:nth-child(1) {
+    transform: translateX(-5px);
+    width: 25px;
+  }
+  .menu span:nth-child(3) {
+    transform: translateX(-7px);
+    width: 20px;
+  }
+  .menu.active span:nth-child(2) {
+    transform: translateX(60px);
+  }
+  .menu.active span:nth-child(1) {
+    width: 40px;
+    transform: translateY(11px) rotate(45deg);
+  }
+  .menu.active span:nth-child(3) {
+    width: 40px;
+    transform: translateY(-11px) rotate(315deg);
+  }
+  .spaceTop {
+    padding-top: 80px !important;
+  }
+}
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -10,16 +112,16 @@
   user-select: none;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .spaceTop {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .spaceTopAD {
@@ -30,10 +132,19 @@ body {
   z-index: 99999;
   background: #0e2d80;
 }
+#HEADER-CL .navResponsive {
+  display: none;
+}
 #HEADER-CL .item a {
   font-size: 15px;
   color: #fff;
   transition: all 0.3s ease;
+}
+#HEADER-CL .item a:hover {
+  color: #dfff00;
+}
+#HEADER-CL .item .log-reg {
+  display: none;
 }
 #HEADER-CL .line {
   width: 1px;
@@ -41,18 +152,6 @@ body {
   background: #fff;
   opacity: 0.5;
   margin: 0 10px;
-}
-#HEADER-CL .item a:hover {
-  color: #dfff00;
-}
-
-#HEADER-AD {
-  z-index: 99999;
-  background: #005496;
-}
-
-#FOOTER-AD {
-  background: #005496;
 }
 
 #FOOTER-CL {
@@ -65,6 +164,15 @@ body {
 #FOOTER-CL a {
   color: #fff;
   margin-bottom: 5px;
+}
+
+#HEADER-AD {
+  z-index: 99999;
+  background: #005496;
+}
+
+#FOOTER-AD {
+  background: #005496;
 }
 
 /*# sourceMappingURL=app.css.map */

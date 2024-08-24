@@ -1,5 +1,6 @@
 @import "../animations";
 @import "../colors";
+@import "responsive";
 
 .header {
 	background: url("https://hnue.edu.vn/Portals/_default/skins/hnue_skin/img/menu_bg.png")
@@ -35,23 +36,22 @@
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		text-transform: uppercase;
 	}
+
 	a {
 		color: $color1;
 		margin-bottom: 5px;
 		text-transform: uppercase;
-		font-size: 25px;
+		font-size: 22px;
 		font-weight: 500;
 		position: relative;
 		padding: 10px 22px;
 		background-color: $color2;
 		transition: all 0.2s ease;
 	}
+
 	a:hover {
-		background-color: $color6-h;
-		border-radius: 15px;
-	}
-	a:active {
-		transform: scale(0.96);
+		background-color: $color9;
+		border-radius: 10px;
 	}
 
 	a:before,
@@ -112,6 +112,7 @@
 		background-position: 50% 0%;
 		animation: botBubbles 0.6s ease;
 	}
+
 	.enterReg {
 		background: url("https://animatedimages.org/data/media/562/animated-line-image-0379.gif")
 			no-repeat center center;

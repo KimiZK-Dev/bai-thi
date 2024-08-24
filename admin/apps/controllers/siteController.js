@@ -1,4 +1,4 @@
-class adminController {
+class siteController {
 	manage(req, res, next) {
 		res.render("admin/manage", {
 			title: "Quản Lí",
@@ -8,4 +8,4 @@ class adminController {
 	}
 }
 
-export default new adminController();
+export default new siteController();

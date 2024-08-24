@@ -1,0 +1,21 @@
+@media (max-width: 1070px) {
+	.header {
+		background: $color8 !important;
+		.d-flex {
+			flex-direction: column;
+			.headerL div {
+				color: $color1;
+				margin-top: 10px;
+				text-align: center;
+				h3 {
+					margin-bottom: 0;
+				}
+			}
+			.slogan h5 {
+				text-align: center;
+				color: $color4 !important;
+				margin-top: 10px;
+			}
+		}
+	}
+}

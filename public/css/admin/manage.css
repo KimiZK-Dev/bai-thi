@@ -1,11 +1,3 @@
-@media print {
-  .table,
-  .tablebody {
-    overflow: visible;
-    height: auto !important;
-    width: auto !important;
-  }
-}
 .title {
   background: rgba(221, 221, 221, 0.5254901961);
   margin-bottom: 35px;
@@ -25,16 +17,15 @@
 
 .tableHeader {
   width: 100%;
-  padding: 1% 3%;
+  padding: 1% 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.container-input {
+.tableHeader .container-input {
   position: relative;
 }
-.container-input input {
+.tableHeader .container-input input {
   color: #fff;
   background: #0288d1;
   outline: none;
@@ -43,19 +34,19 @@
   width: 70%;
   transition: all 0.2s ease;
 }
-.container-input input::placeholder {
+.tableHeader .container-input input::placeholder {
   color: #dddddd;
   opacity: 1; /* Firefox */
 }
-.container-input input::-ms-input-placeholder {
+.tableHeader .container-input input::-ms-input-placeholder {
   /* Edge 12-18 */
   color: #dddddd;
 }
-.container-input input::-webkit-input-placeholder {
+.tableHeader .container-input input::-webkit-input-placeholder {
   /* Chrome, Safari, Opera */
   color: #dddddd;
 }
-.container-input i {
+.tableHeader .container-input i {
   color: #fff;
   position: absolute;
   top: 50%;
@@ -63,31 +54,30 @@
   transform: translate(20%, -50%);
   background: #0288d1;
 }
-.container-input input:focus {
+.tableHeader .container-input input:focus {
   width: 100%;
 }
-
-.expGrp {
+.tableHeader .expGrp {
   position: relative;
 }
-.expGrp input {
+.tableHeader .expGrp input {
   display: none;
 }
-.expGrp input:checked + .expFile-options {
+.tableHeader .expGrp input:checked + .expFile-options {
   opacity: 1;
   z-index: 999;
 }
-.expGrp .expFile-btn {
+.tableHeader .expGrp .expFile-btn {
   color: #fff;
   background: #0288d1;
   padding: 8px 13px;
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.expGrp .expFile-btn:hover {
+.tableHeader .expGrp .expFile-btn:hover {
   background-color: #005496;
 }
-.expGrp .expFile-options {
+.tableHeader .expGrp .expFile-options {
   z-index: -999;
   position: absolute;
   overflow: hidden;
@@ -100,7 +90,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: all 0.2s ease;
 }
-.expGrp .expFile-options label:first-of-type {
+.tableHeader .expGrp .expFile-options label:first-of-type {
   width: 100%;
   text-align: center;
   padding: 10px;
@@ -108,11 +98,11 @@
   font-weight: 500;
   color: #fff;
 }
-.expGrp .expFile-options img {
+.tableHeader .expGrp .expFile-options img {
   width: 30px;
   height: auto;
 }
-.expGrp .file {
+.tableHeader .expGrp .file {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -122,16 +112,16 @@
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.expGrp .file:hover {
+.tableHeader .expGrp .file:hover {
   transform: scale(1.02);
   background-color: #2870aa;
 }
 
 .tableBody {
-  max-height: calc(90% - 25px);
+  max-height: calc(90% - 80px);
   overflow: auto;
   overflow: overlay;
-  margin: 0 3%;
+  margin: 0 4%;
 }
 .tableBody::-webkit-scrollbar {
   display: block;
@@ -158,7 +148,7 @@ table {
 th,
 td {
   border-collapse: collapse;
-  padding: 1rem;
+  padding: 1.3rem;
   text-align: center;
 }
 
@@ -203,7 +193,10 @@ tbody tr:nth-child(even) {
 
 @media (max-width: 1000px) {
   td:not(:first-of-type) {
-    min-width: 12.1rem;
+    min-width: 250px;
+  }
+  td:first-of-type {
+    min-width: 100px;
   }
 }
 

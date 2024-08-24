@@ -1,12 +1,4 @@
 @import "../colors";
-@media print {
-	.table,
-	.tablebody {
-		overflow: visible;
-		height: auto !important;
-		width: auto !important;
-	}
-}
 
 .title {
 	background: $color5-o;
@@ -28,124 +20,124 @@
 
 .tableHeader {
 	width: 100%;
-	padding: 1% 3%;
+	padding: 1% 4%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
 
-.container-input {
-	position: relative;
-	input {
-		color: $color1;
-		background: $color8;
-		outline: none;
-		border: none;
-		padding: 8px 10px 8px 40px;
-		width: 70%;
-		transition: all 0.2s ease;
-		&::placeholder {
-			color: $color5;
-			opacity: 1; /* Firefox */
+	.container-input {
+		position: relative;
+		input {
+			color: $color1;
+			background: $color8;
+			outline: none;
+			border: none;
+			padding: 8px 10px 8px 40px;
+			width: 70%;
+			transition: all 0.2s ease;
+			&::placeholder {
+				color: $color5;
+				opacity: 1; /* Firefox */
+			}
+
+			&::-ms-input-placeholder {
+				/* Edge 12-18 */
+				color: $color5;
+			}
+
+			&::-webkit-input-placeholder {
+				/* Chrome, Safari, Opera */
+				color: $color5;
+			}
 		}
 
-		&::-ms-input-placeholder {
-			/* Edge 12-18 */
-			color: $color5;
+		i {
+			color: $color1;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(20%, -50%);
+			background: $color8;
+		}
+		input:focus {
+			width: 100%;
+		}
+	}
+
+	.expGrp {
+		position: relative;
+		input {
+			display: none;
 		}
 
-		&::-webkit-input-placeholder {
-			/* Chrome, Safari, Opera */
-			color: $color5;
+		input:checked + .expFile-options {
+			opacity: 1;
+			z-index: 999;
 		}
-	}
 
-	i {
-		color: $color1;
-		position: absolute;
-		top: 50%;
-		left: 0;
-		transform: translate(20%, -50%);
-		background: $color8;
-	}
-	input:focus {
-		width: 100%;
-	}
-}
+		.expFile-btn {
+			color: $color1;
+			background: $color8;
+			padding: 8px 13px;
+			transition: all 0.2s ease;
+			cursor: pointer;
+		}
 
-.expGrp {
-	position: relative;
-	input {
-		display: none;
-	}
+		.expFile-btn:hover {
+			background-color: $color10;
+		}
 
-	input:checked + .expFile-options {
-		opacity: 1;
-		z-index: 999;
-	}
+		.expFile-options {
+			z-index: -999;
+			position: absolute;
+			overflow: hidden;
+			right: 0;
+			margin-top: 12px;
+			width: 12rem;
+			opacity: 0;
+			transform: scale(0.8);
+			transform-origin: top right;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			transition: all 0.2s ease;
+		}
 
-	.expFile-btn {
-		color: $color1;
-		background: $color8;
-		padding: 8px 13px;
-		transition: all 0.2s ease;
-		cursor: pointer;
-	}
+		.expFile-options label:first-of-type {
+			width: 100%;
+			text-align: center;
+			padding: 10px;
+			background: $color8;
+			font-weight: 500;
+			color: $color1;
+		}
 
-	.expFile-btn:hover {
-		background-color: $color10;
-	}
+		.expFile-options img {
+			width: 30px;
+			height: auto;
+		}
 
-	.expFile-options {
-		z-index: -999;
-		position: absolute;
-		overflow: hidden;
-		right: 0;
-		margin-top: 12px;
-		width: 12rem;
-		opacity: 0;
-		transform: scale(0.8);
-		transform-origin: top right;
-		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-		transition: all 0.2s ease;
-	}
+		.file {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			padding: 10px 35px;
+			background: $color5-o;
+			transition: all 0.2s ease;
+			cursor: pointer;
+		}
 
-	.expFile-options label:first-of-type {
-		width: 100%;
-		text-align: center;
-		padding: 10px;
-		background: $color8;
-		font-weight: 500;
-		color: $color1;
-	}
-
-	.expFile-options img {
-		width: 30px;
-		height: auto;
-	}
-
-	.file {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		width: 100%;
-		padding: 10px 35px;
-		background: $color5-o;
-		transition: all 0.2s ease;
-		cursor: pointer;
-	}
-
-	.file:hover {
-		transform: scale(1.02);
-		background-color: $color7;
+		.file:hover {
+			transform: scale(1.02);
+			background-color: $color7;
+		}
 	}
 }
 
 .tableBody {
-	max-height: calc(90% - 25px);
+	max-height: calc(90% - 80px);
 	overflow: auto;
 	overflow: overlay;
-	margin: 0 3%;
+	margin: 0 4%;
 
 	&::-webkit-scrollbar {
 		display: block;
@@ -175,7 +167,7 @@ table {
 th,
 td {
 	border-collapse: collapse;
-	padding: 1rem;
+	padding: 1.3rem;
 	text-align: center;
 }
 
@@ -207,7 +199,6 @@ tbody tr:nth-child(even) {
 
 .status {
 	padding: 5px 7px;
-	// border-radius: 2rem;
 	&.accepted {
 		background: $color12;
 	}
@@ -221,6 +212,9 @@ tbody tr:nth-child(even) {
 
 @media (max-width: 1000px) {
 	td:not(:first-of-type) {
-		min-width: 12.1rem;
+		min-width: 250px;
+	}
+	td:first-of-type {
+		min-width: 100px;
 	}
 }

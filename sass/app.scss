@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "colors";
+@import "responsive";
 
 * {
 	font-family: "Inter", sans-serif;
@@ -11,15 +12,16 @@
 	text-decoration: none !important;
 	user-select: none;
 }
-::-webkit-scrollbar {
-	display: none;
-}
 body {
 	overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 .spaceTop {
-	padding-top: 60px;
+	padding-top: 50px;
 }
 .spaceTopAD {
 	padding-top: 120px;
@@ -28,11 +30,25 @@ body {
 #HEADER-CL {
 	z-index: 99999;
 	background: $color2;
-	.item a {
-		font-size: 15px;
-		color: $color1;
-		transition: all 0.3s ease;
+
+	.navResponsive {
+		display: none;
 	}
+
+	.item {
+		a {
+			font-size: 15px;
+			color: $color1;
+			transition: all 0.3s ease;
+		}
+		a:hover {
+			color: $color4;
+		}
+		.log-reg {
+			display: none;
+		}
+	}
+
 	.line {
 		width: 1px;
 		height: 80%;
@@ -40,17 +56,6 @@ body {
 		opacity: 0.5;
 		margin: 0 10px;
 	}
-	.item a:hover {
-		color: $color4;
-	}
-}
-#HEADER-AD {
-	z-index: 99999;
-	background: $color10;
-}
-
-#FOOTER-AD {
-	background: $color10;
 }
 #FOOTER-CL {
 	background: $color2;
@@ -62,4 +67,13 @@ body {
 		color: $color1;
 		margin-bottom: 5px;
 	}
+}
+
+#HEADER-AD {
+	z-index: 99999;
+	background: $color10;
+}
+
+#FOOTER-AD {
+	background: $color10;
 }

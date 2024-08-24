@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .header2 {
-  transform: translateY(-13px);
+  margin-bottom: 10px !important;
   background: #2870aa;
 }
 .header2 nav a {

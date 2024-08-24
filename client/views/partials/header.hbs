@@ -1,6 +1,20 @@
 <header id="HEADER-CL" class="position-fixed w-100">
 	<nav class="navbar navbar-expand-lg">
 		<div class="contentNav w-100 d-flex justify-content-between px-5 py-1">
+
+			<div class="navResponsive">
+				<div class="menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="loginBtn">
+					<a href="/auth/login" target="_blank">
+						<i class="fa-regular fa-right-to-bracket"></i>
+					</a>
+				</div>
+			</div>
+
 			<div class="navL d-flex align-items-center">
 				<div class="item">
 					<a href="#">
@@ -57,11 +71,23 @@
 				<span class="line"></span>
 
 				<div class="item">
-					<a href="/auth/login" target="_blank">
+					<a href="/auth/login" target="_blank" class="loginBtn">
 						<i class="fa-light fa-right-to-bracket fa-lg"></i>
 					</a>
+					<div class="log-reg">
+						<a href="/auth/login">Đăng Nhập</a>
+						<a href="/auth/register">Đăng Ký</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
 </header>
+
+<script>
+	let menuNav = document.querySelector('.menu'); let navL =
+	document.querySelector('.navL'); let navR = document.querySelector('.navR');
+	menuNav.onclick = function(){ navL.classList.toggle('active');
+	navR.classList.toggle('active'); menuNav.classList.toggle('active'); }
+
+</script>

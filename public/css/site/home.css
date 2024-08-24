@@ -22,6 +22,27 @@
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+@media (max-width: 1070px) {
+  .header {
+    background: #0288d1 !important;
+  }
+  .header .d-flex {
+    flex-direction: column;
+  }
+  .header .d-flex .headerL div {
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .header .d-flex .headerL div h3 {
+    margin-bottom: 0;
+  }
+  .header .d-flex .slogan h5 {
+    text-align: center;
+    color: #dfff00 !important;
+    margin-top: 10px;
+  }
+}
 .header {
   background: url("https://hnue.edu.vn/Portals/_default/skins/hnue_skin/img/menu_bg.png") no-repeat center center;
   background-size: 100% auto;
@@ -58,7 +79,7 @@
   color: #fff;
   margin-bottom: 5px;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
   position: relative;
   padding: 10px 22px;
@@ -66,11 +87,8 @@
   transition: all 0.2s ease;
 }
 .linked a:hover {
-  background-color: #00375f;
-  border-radius: 15px;
-}
-.linked a:active {
-  transform: scale(0.96);
+  background-color: #7d2ae8;
+  border-radius: 10px;
 }
 .linked a:before,
 .linked a:after {
