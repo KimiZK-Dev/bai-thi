@@ -1,8 +1,8 @@
 import express from "express";
-import { connectToDB } from "./database/mongoDB.js";
+import { connectToDB } from "./includes/database/mongoDB.js";
 import "dotenv/config";
 import router from "./routes/router.js";
-import setupEngine from "./config/engines.js";
+import setupEngine from "./includes/config/engines.js";
 
 const port = process.env.PORT || 3000;
 const app = express();

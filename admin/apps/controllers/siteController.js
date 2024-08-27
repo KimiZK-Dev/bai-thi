@@ -1,4 +1,4 @@
-import Users from "../../../database/models/Users.js";
+import Users from "../../../includes/database/models/Users.js";
 
 class SiteController {
 	async manage(req, res, next) {
