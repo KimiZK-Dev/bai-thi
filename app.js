@@ -1,23 +1,13 @@
 import express from "express";
-import { fileURLToPath } from "url";
-import { connectToDB } from "./database/mysql.js";
-import path from "path";
+import { connectToDB } from "./database/mongoDB.js";
 import "dotenv/config";
 import router from "./routes/router.js";
 import setupEngine from "./config/engines.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 const port = process.env.PORT || 3000;
 const app = express();
 
-// Middleware
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// View engine setup
+// View engine
 setupEngine(app);
 
 // Routes

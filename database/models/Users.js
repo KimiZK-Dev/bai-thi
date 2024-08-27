@@ -1,40 +1,33 @@
-import { Sequelize, DataTypes, Model } from "sequelize";
+import mongoose from "mongoose";
+import slug from "mongoose-slug-updater";
+import sequence from "mongoose-sequence";
+import MongooseDelete from "mongoose-delete";
 
-const sequelize = new Sequelize("kimizk_project", "root", "", {
-	host: "localhost",
-	dialect: "mysql",
-});
+const AutoIncrement = sequence(mongoose);
+const { Schema } = mongoose;
 
-class Users extends Model {}
-
-Users.init(
+const UsersSchema = new Schema(
 	{
-		email: {
-			type: DataTypes.STRING,
-			allowNull: false,
-		},
-		passport: {
-			type: DataTypes.INTEGER,
-			allowNull: false,
-			unique: true,
-		},
-		fullName: {
-			type: DataTypes.STRING,
-			allowNull: false,
-		},
-		password: {
-			type: DataTypes.STRING,
-			allowNull: false,
-		},
+		userID: Number,
+		email: { type: String, required: true, unique: true },
+		passport: { type: Number, required: true, unique: true },
+		fullName: { type: String, required: true },
+		password: { type: String, required: true },
+		slug: { type: String, slug: "email", unique: true },
 	},
 	{
-		sequelize,
-		modelName: "Users",
 		timestamps: true,
-		paranoid: true,
 	}
 );
 
-sequelize.sync();
+mongoose.plugin(slug);
 
+UsersSchema.plugin(AutoIncrement, {
+	inc_field: "userID",
+}).plugin(MongooseDelete, {
+	deletedAt: true,
+	overrideMethods: "all",
+});
+
+const Users = mongoose.model("Users", UsersSchema);
 export default Users;

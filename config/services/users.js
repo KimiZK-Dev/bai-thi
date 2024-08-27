@@ -8,16 +8,26 @@ function checkPass(pass, hasPass) {
 async function newUser(email, passport, fullName, password) {
 	try {
 		const hashPass = bcryptjs.hashSync(password, 10);
-		const newUser = await Users.create({
+		const user = new Users({
 			email: email.trim(),
 			passport: passport.trim(),
 			fullName: fullName.trim(),
 			password: hashPass,
 		});
+
+		const newUser = await user.save();
 		return newUser;
 	} catch (err) {
 		console.error(err);
 	}
 }
 
-export { checkPass, newUser };
+async function listUser() {
+	try {
+		return await Users.findAll();
+	} catch (err) {
+		console.error(err);
+	}
+}
+
+export { checkPass, newUser, listUser };

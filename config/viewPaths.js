@@ -6,3 +6,4 @@ const __dirname = path.dirname(__filename);
 
 export const clientViewPath = path.join(__dirname, "..", "client", "views");
 export const adminViewPath = path.join(__dirname, "..", "admin", "views");
+export const publicPath = path.join(__dirname, "..", "public");
