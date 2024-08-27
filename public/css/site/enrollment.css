@@ -40,6 +40,11 @@
     row-gap: 5px;
   }
 }
+@media (max-width: 515px) {
+  label {
+    max-width: calc(100% - 20px);
+  }
+}
 .header2 {
   margin-bottom: 10px !important;
   background: #2870aa;
@@ -144,7 +149,9 @@ marquee a {
   -moz-appearance: textfield;
   appearance: textfield; /* Thuộc tính tiêu chuẩn cho khả năng tương thích */
 }
+.formReg .formInput select,
 .formReg .formInput input {
+  appearance: none;
   outline: none;
   border-radius: 5px;
   width: 100%;
@@ -157,6 +164,9 @@ marquee a {
   transform: translateY(-50%);
   left: 15px;
   color: #a5a5a5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   pointer-events: none;
 }
 .formReg .formInput input:not(:placeholder-shown) + label,

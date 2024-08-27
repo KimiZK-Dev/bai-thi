@@ -1,4 +1,4 @@
-import Users from "../../../includes/database/models/Users.js";
+import Enrollments from "../../../includes/database/models/Enrollments.js";
 
 class SiteController {
 	async manage(req, res, next) {
@@ -7,7 +7,7 @@ class SiteController {
 				title: "Quản Lí",
 				nPage: "Quản Lí DS ĐK Tuyển Sinh",
 				css: "/css/admin/manage.css",
-				users: await Users.find().lean(),
+				enrollments: await Enrollments.find().lean(),
 			});
 		} catch (err) {
 			next(err);

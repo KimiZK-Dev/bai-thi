@@ -43,3 +43,8 @@
 		}
 	}
 }
+@media (max-width: 515px) {
+	label {
+		max-width: calc(100% - 20px);
+	}
+}

@@ -1,10 +1,5 @@
 import Users from "../../../includes/database/models/Users.js";
-import {
-	checkPass,
-	newUser,
-	listUser,
-} from "../../../includes/config/services/users.js";
-import { isRedirect } from "node-fetch";
+import { checkPass, newUser } from "../../../includes/config/services/users.js";
 
 class authController {
 	// [ GET ]

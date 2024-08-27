@@ -63,6 +63,11 @@
     row-gap: 5px;
   }
 }
+@media (max-width: 515px) {
+  label {
+    max-width: calc(100% - 20px);
+  }
+}
 .header {
   background: url("https://hnue.edu.vn/Portals/_default/skins/hnue_skin/img/menu_bg.png") no-repeat center center;
   background-size: 100% auto;

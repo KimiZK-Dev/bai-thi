@@ -115,7 +115,9 @@ marquee {
 			appearance: textfield; /* Thuộc tính tiêu chuẩn cho khả năng tương thích */
 		}
 
+		select,
 		input {
+			appearance: none;
 			outline: none;
 			border-radius: 5px;
 			width: 100%;
@@ -129,6 +131,10 @@ marquee {
 			transform: translateY(-50%);
 			left: 15px;
 			color: $color1-o;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			// max-width: 350px;
 			pointer-events: none;
 		}
 

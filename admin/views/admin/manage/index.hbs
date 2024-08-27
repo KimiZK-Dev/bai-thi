@@ -72,11 +72,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				{{#each users}}
+				{{#each enrollments}}
 					<tr>
-						<td> {{this.userID}} </td>
-						<td>{{this.fullName}}</td>
-						<td> {{this.email}} </td>
+						<td> {{this.EnrollmentID}} </td>
+						<td>{{this.PersonalInformation.fullName}}</td>
+						<td>
+							{{formatDate this.PersonalInformation.birthDay}}
+						</td>
 						<td>{{formatDate this.createdAt}}</td>
 						<td>
 							<span class="status pending">Chờ duyệt</span>
