@@ -84,13 +84,23 @@
 							<span class="status pending">Chờ duyệt</span>
 						</td>
 						<td>
-							<a href="#" class="btn btn-warning" id="accept">
+							<a
+								href="#"
+								class="btn btn-warning"
+								id="{{this._id}}"
+							>
 								<i class="fa-sharp fa-solid fa-check"></i>
 							</a>
-							<a href="#" class="btn btn-danger" id="cancel">
+							<a
+								href="#"
+								class="btn btn-danger removeBtn"
+								data-id="{{this._id}}"
+								data-bs-toggle="modal"
+								data-bs-target="#removeModal"
+							>
 								<i class="fa-sharp fa-regular fa-xmark"></i>
 							</a>
-							<a href="#" class="btn btn-info" id="return">
+							<a href="#" class="btn btn-info" id="{{this._id}}">
 								<i class="fa-sharp fa-solid fa-rotate"></i>
 							</a>
 						</td>
@@ -100,4 +110,44 @@
 		</table>
 	</section>
 </main>
+
+{{! FORM DELETE  }}
+<form method="POST" name="formRemove"></form>
+{{! MODEL DELETE  }}
+<div
+	class="fade modal"
+	id="removeModal"
+	data-bs-keyboard="false"
+	tabindex="-1"
+	aria-hidden="true"
+>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Duyệt Hồ Sơ</h5>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				></button>
+			</div>
+			<div class="modal-body">
+				<span>Bạn có chắc chắn hủy đơn tuyển sinh này không?</span>
+			</div>
+			<div class="modal-footer">
+				<button
+					type="button"
+					class="btn btn-secondary"
+					data-bs-dismiss="modal"
+				>Hủy bỏ</button>
+				<button
+					type="button"
+					class="btn btn-danger"
+					id="submitRemove"
+				>Chấp nhận</button>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="/js/script.js"></script>

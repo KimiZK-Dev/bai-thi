@@ -219,6 +219,10 @@ tbody tr:nth-child(even) {
 	}
 }
 
+.modal {
+	z-index: 99999;
+}
+
 @media (max-width: 1000px) {
 	td:not(:first-of-type) {
 		min-width: 250px;

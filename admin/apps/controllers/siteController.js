@@ -13,6 +13,15 @@ class SiteController {
 			next(err);
 		}
 	}
+	async removeERM(req, res, next) {
+		try {
+			console.log(req.params.id);
+			await Enrollments.deleteOne({ _id: req.params.id });
+			res.redirect("back");
+		} catch (err) {
+			next(err);
+		}
+	}
 }
 
 export default new SiteController();
