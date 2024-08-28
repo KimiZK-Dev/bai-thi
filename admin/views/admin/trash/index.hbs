@@ -1,14 +1,14 @@
 <div class="title w-100 d-flex justify-content-center pt-3 mt-3">
 	<div class="w-75">
-		<h3>danh sách thí sinh đăng ký</h3>
+		<h3>danh sách thí sinh bị hủy</h3>
 		<hr />
 	</div>
 </div>
 
 <div class="linked text-center">
-	<a href="trash">
-		<i class="fa-sharp fa-solid fa-trash"></i>
-		Đi tới thùng rác
+	<a href="manage">
+		<i class="fa-sharp fa-solid fa-turn-left"></i>
+		Quay về
 	</a>
 	<p>Số đơn hiện có: {{count}} </p>
 </div>
@@ -66,11 +66,7 @@
 						<i class="fa-sharp fa-solid fa-sort"></i>
 					</th>
 					<th>
-						Thời gian nộp
-						<i class="fa-sharp fa-solid fa-sort"></i>
-					</th>
-					<th>
-						Trạng thái
+						Thời gian hủy đơn
 						<i class="fa-sharp fa-solid fa-sort"></i>
 					</th>
 					<th>
@@ -82,40 +78,34 @@
 			<tbody>
 				{{#each enrollments}}
 					<tr>
-						<td> {{this.EnrollmentID}} </td>
+						<td>{{this.EnrollmentID}}</td>
 						<td>{{this.PersonalInformation.fullName}}</td>
 						<td>
 							{{formatDate this.PersonalInformation.birthDay}}
 						</td>
-						<td>{{formatDate this.createdAt}}</td>
-						<td>
-							<span class="status pending">Chờ duyệt</span>
-						</td>
+						<td>{{formatDate this.deletedAt}}</td>
 						<td>
 							<a
 								href="#"
-								class="btn btn-warning"
+								class="btn btn-info undoBtn"
 								data-id="{{this._id}}"
 							>
-								<i class="fa-sharp fa-solid fa-check"></i>
+								<i class="fa-sharp fa-solid fa-trash-undo"></i>
 							</a>
 							<a
 								href="#"
-								class="btn btn-danger removeBtn"
+								class="btn btn-danger deleteBtn"
 								data-id="{{this._id}}"
 								data-bs-toggle="modal"
-								data-bs-target="#removeModal"
+								data-bs-target="#delModal"
 							>
-								<i class="fa-sharp fa-regular fa-xmark"></i>
-							</a>
-							<a href="#" class="btn btn-info" id="{{this._id}}">
-								<i class="fa-sharp fa-solid fa-rotate"></i>
+								<i class="fa-sharp fa-solid fa-trash-xmark"></i>
 							</a>
 						</td>
 					</tr>
 				{{else}}
 					<tr>
-						<td colspan="6">Chưa có đơn nào được nộp !</td>
+						<td colspan="5">Chưa có hồ sơ nào bị hủy !</td>
 					</tr>
 				{{/each}}
 			</tbody>
@@ -124,11 +114,12 @@
 </main>
 
 {{! FORM DELETE  }}
-<form method="POST" name="formRemove"></form>
+<form method="POST" name="formDel"></form>
+<form method="POST" name="formUndo"></form>
 {{! MODEL DELETE  }}
 <div
 	class="fade modal"
-	id="removeModal"
+	id="delModal"
 	data-bs-keyboard="false"
 	tabindex="-1"
 	aria-hidden="true"
@@ -136,7 +127,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Duyệt Hồ Sơ</h5>
+				<h5 class="modal-title">Xóa Hồ Sơ</h5>
 				<button
 					type="button"
 					class="btn-close"
@@ -145,7 +136,7 @@
 				></button>
 			</div>
 			<div class="modal-body">
-				<span>Bạn có chắc chắn hủy đơn tuyển sinh này không?</span>
+				<span>Bạn có chắc chắn xóa vĩnh viễn đơn tuyển sinh này không?</span>
 			</div>
 			<div class="modal-footer">
 				<button
@@ -153,13 +144,10 @@
 					class="btn btn-secondary"
 					data-bs-dismiss="modal"
 				>Hủy bỏ</button>
-				<button
-					type="button"
-					class="btn btn-danger"
-					id="submitRemove"
-				>Chấp nhận</button>
+				<button type="button" class="btn btn-danger" id="submitDel">Chấp
+					nhận</button>
 			</div>
 		</div>
 	</div>
 </div>
-<script src="/js/manage.js"></script>
+<script src="/js/trash.js"></script>
